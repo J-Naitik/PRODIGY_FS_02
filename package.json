@@ -1,0 +1,17 @@
+{
+  "dependencies": {
+    "express": "^5.1.0",
+    "mongodb": "^6.20.0",
+    "mongoose": "^8.18.3"
+  },
+  "name": "prodigy_fs_02",
+  "description": "🚀 A simple **Employee Management System** web application that enables administrators to perform **CRUD operations** (➕ Create, 📖 Read, ✏️ Update, ❌ Delete) on employee records.   🔐 Includes secure authentication and ✅ validation to protect sensitive employee data.",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

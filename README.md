@@ -19,7 +19,7 @@
 - ✏️ Update employee information  
 - ❌ Delete employee records  
 - 🔐 Secure login & authentication  
-- ✅ Proper input validation  
+- ✅ Proper input validation
 
 ---
 

@@ -1,35 +1,57 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React, { useState, useEffect } from "react";
+import EmployeeList from "./components/EmployeeList";
+import EmployeeForm from "./components/EmployeeForm";
+import EmployeeDetails from "./components/EmployeeDetails";
+import AdminLogin from "./components/AdminLogin";
+import { getEmployees } from "./api/employeeApi";
 
-function App() {
-  const [count, setCount] = useState(0)
+const App = () => {
+  const [employees, setEmployees] = useState([]);
+  const [editingEmployee, setEditingEmployee] = useState(null);
+  const [selectedEmployee, setSelectedEmployee] = useState(null);
+  const [isAdmin, setIsAdmin] = useState(false); // track login state
+
+  const fetchEmployees = async () => {
+    const res = await getEmployees();
+    setEmployees(res.data);
+  };
+
+  useEffect(() => {
+    if (isAdmin) {
+      fetchEmployees();
+    }
+  }, [isAdmin]);
+
+  if (!isAdmin) {
+    return <AdminLogin onLogin={() => setIsAdmin(true)} />;
+  }
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
+    <div style={{ padding: "20px" }}>
+      <h1>Employee Management System</h1>
 
-export default App
+      {/* Form only for admin */}
+      <EmployeeForm
+        fetchEmployees={fetchEmployees}
+        editingEmployee={editingEmployee}
+        setEditingEmployee={setEditingEmployee}
+      />
+
+      {/* List with admin privileges */}
+      <EmployeeList
+        employees={employees}
+        onEdit={setEditingEmployee}
+        fetchEmployees={fetchEmployees}
+        onSelect={setSelectedEmployee}
+        isAdmin={isAdmin}
+      />
+
+      <EmployeeDetails
+        employee={selectedEmployee}
+        onClose={() => setSelectedEmployee(null)}
+      />
+    </div>
+  );
+};
+
+export default App;

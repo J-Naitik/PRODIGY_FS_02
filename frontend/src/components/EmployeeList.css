@@ -1,0 +1,92 @@
+.employee-list {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 24px;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  }
+  
+  .employee-list h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #2d2d2d;
+    margin-bottom: 20px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #eee;
+  }
+  
+  .employee-list ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .employee-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 18px;
+    background: #f9fafb;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    transition: background 0.2s ease;
+    margin-bottom: 14px;
+  }
+  
+  .employee-item:hover {
+    background: #f1f5f9;
+  }
+  
+  .employee-info p {
+    margin: 2px 0;
+  }
+  
+  .employee-info p:first-child {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #111827;
+  }
+  
+  .employee-info p:nth-child(2) {
+    font-size: 0.9rem;
+    color: #374151;
+  }
+  
+  .employee-info p:nth-child(3) {
+    font-size: 0.85rem;
+    color: #6b7280;
+  }
+  
+  .employee-actions {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .employee-actions button {
+    padding: 8px 14px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    color: white;
+    transition: background 0.2s ease;
+  }
+  
+  .employee-actions .edit-btn {
+    background: #3b82f6;
+  }
+  
+  .employee-actions .edit-btn:hover {
+    background: #2563eb;
+  }
+  
+  .employee-actions .delete-btn {
+    background: #ef4444;
+  }
+  
+  .employee-actions .delete-btn:hover {
+    background: #dc2626;
+  }
+  

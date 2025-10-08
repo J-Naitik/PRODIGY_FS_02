@@ -22,8 +22,11 @@
 - ✅ Proper input validation
 
 ---
-
-
+_________________________________________________________________________
+|                                                                       |
+| Before running make sure you replace your mangodb atlas url in dotenv |
+|                                                                       |
+-------------------------------------------------------------------------
 2️⃣ Setup Backend
 
 Follow instructions in the backend/README.md

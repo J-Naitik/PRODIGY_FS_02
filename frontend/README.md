@@ -1,42 +1,46 @@
-## 🧩 Setup Instructions
+Frontend - Employee Management System
 
-### 1️⃣ Install Dependencies
-```bash
+This is the frontend of the Employee Management System, built using React.js.
+It connects with the backend APIs to display and manage employee data.
+
+Requirements:
+
+Node.js (v16+)
+
+Backend server running on http://localhost:5000
+ or your deployed API URL
+
+Setup Instructions:
+
+Install dependencies
 npm install
-2️⃣ Run the Frontend
-bash
-Copy code
-npm run dev
-The app will start on:
 
-arduino
-Copy code
-http://localhost:5173
-⚙️ Connecting to Backend
+Run the Frontend
+npm run dev
+The app will start on http://localhost:5173
+
+Connecting to Backend:
+
 The frontend communicates with the backend API using Axios.
 
 Ensure the backend is running before starting the frontend.
 
 If your backend runs on a different URL, update it in:
-
-arduino
-Copy code
-src/config.js
-or your .env file as:
-
-ini
-Copy code
+src/config.js or your .env file as
 VITE_API_BASE_URL=http://localhost:5000
-🧰 Tech Stack
+
+Tech Stack:
+
 React.js (Vite)
 
 Axios
 
-Tailwind CSS / CSS Framework
+Tailwind CSS or any CSS framework
 
 React Router DOM
 
-🎨 Features
+Features:
+
 Employee management interface
 
 CRUD operations
@@ -44,11 +48,6 @@ CRUD operations
 API integration
 
 Responsive UI
-
-
-
-
-
 
 
 # React + Vite

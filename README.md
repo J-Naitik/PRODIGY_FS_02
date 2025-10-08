@@ -23,3 +23,22 @@
 
 ---
 
+
+2️⃣ Setup Backend
+
+Follow instructions in the backend/README.md
+
+3️⃣ Setup Frontend
+
+Follow instructions in the frontend/README.md
+
+4️⃣ Run the Application
+
+Make sure both servers are running:
+
+Backend → http://localhost:5000
+
+Frontend → http://localhost:5173
+
+The frontend will send API requests to the backend automatically.
+

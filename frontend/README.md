@@ -1,3 +1,56 @@
+## 🧩 Setup Instructions
+
+### 1️⃣ Install Dependencies
+```bash
+npm install
+2️⃣ Run the Frontend
+bash
+Copy code
+npm run dev
+The app will start on:
+
+arduino
+Copy code
+http://localhost:5173
+⚙️ Connecting to Backend
+The frontend communicates with the backend API using Axios.
+
+Ensure the backend is running before starting the frontend.
+
+If your backend runs on a different URL, update it in:
+
+arduino
+Copy code
+src/config.js
+or your .env file as:
+
+ini
+Copy code
+VITE_API_BASE_URL=http://localhost:5000
+🧰 Tech Stack
+React.js (Vite)
+
+Axios
+
+Tailwind CSS / CSS Framework
+
+React Router DOM
+
+🎨 Features
+Employee management interface
+
+CRUD operations
+
+API integration
+
+Responsive UI
+
+
+
+
+
+
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
